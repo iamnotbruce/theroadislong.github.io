@@ -38,5 +38,4 @@ function calculate() {
   var pandolf = 1.5*weight+2*(weight+slider1.value)*(slider1.value/weight)^2+terrain*(weight+slider1.value)*(1.5*slider2.value^2+0.35*slider2.value*grade)
   	width =((((pandolf*0.0143)/5.05)/weight)*1000)/3.5
 	elem.style.width = width;
-  }
 }
