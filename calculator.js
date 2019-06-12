@@ -1,3 +1,4 @@
+/*
 var RGBChange = function() {
 	$('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
 };
@@ -11,7 +12,7 @@ var g = $('#G').slider()
 var b = $('#B').slider()
 		.on('slide', RGBChange)
 		.data('slider');
-
+*/
 var slider1 = document.getElementById("load");
 var slider2 = document.getElementById("march");
 var output1 = document.getElementById("weight");
