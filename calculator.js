@@ -22,7 +22,7 @@ output2.innerHTML = slider2.value;
 
 slider1.oninput = function() {
   output1.innerHTML = this.value;
-  //calculate();
+  calculate(slider1.value,slider2.value);
 }
 slider2.oninput = function() {
   output2.innerHTML = this.value;
@@ -37,6 +37,6 @@ function calculate(sval1,sval2) {
   var grade = 0;
   var pandolf = 1.5*weight+2*(weight+sval1)*(sval1.value/weight)^2+terrain*(weight+sval1)*(1.5*sval2.value^2+0.35*sval2.value*grade)
   	width =((((pandolf*0.0143)/5.05)/weight)*1000)/3.5
-	elem.style.width = width;
+	elem.style.width = width * 10;
 	elem.innerHTML = width * 1 + ' MET';
 }
