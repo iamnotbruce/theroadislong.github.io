@@ -29,6 +29,7 @@ slider2.oninput = function() {
   //calculate();
 }
 
+/*
 function calculate() {
   var elem = document.getElementById("metpBar"); 
   var width = 1;
@@ -39,3 +40,4 @@ function calculate() {
   	width =((((pandolf*0.0143)/5.05)/weight)*1000)/3.5
 	elem.style.width = width;
 }
+*/
