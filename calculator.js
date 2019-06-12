@@ -29,16 +29,14 @@ slider2.oninput = function() {
   //calculate();
 }
 
-/*
-function calculate() {
+function calculate(sval1,sval2) {
   var elem = document.getElementById("metpBar"); 
   var width = 1;
   var weight = 60;
   var terrain = 1;
   var grade = 0;
-  var pandolf = 1.5*weight+2*(weight+slider1.value)*(slider1.value/weight)^2+terrain*(weight+slider1.value)*(1.5*slider2.value^2+0.35*slider2.value*grade)
+  var pandolf = 1.5*weight+2*(weight+sval1)*(sval1.value/weight)^2+terrain*(weight+sval1)*(1.5*sval2.value^2+0.35*sval2.value*grade)
   	width =((((pandolf*0.0143)/5.05)/weight)*1000)/3.5
 	elem.style.width = width;
 	elem.innerHTML = width * 1 + ' MET';
 }
-*/
