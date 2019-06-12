@@ -35,7 +35,7 @@ function calculate(sval1,sval2) {
   var weight = 60;
   var terrain = 1;
   var grade = 0;
-  var pandolf = 1.5*weight+2*(weight+sval1)*(sval1.value/weight)^2+terrain*(weight+sval1)*(1.5*sval2.value^2+0.35*sval2.value*grade)
+  var pandolf = 1.5*weight+2*(weight+sval1)*(sval1/weight)^2+terrain*(weight+sval1)*(1.5*(sval2/3.6)^2+0.35*(sval2/3.6)*grade)
   	width =((((pandolf*0.0143)/5.05)/weight)*1000)/3.5
 	elem.style.width = width * 10;
 	elem.innerHTML = width * 1 + ' MET';
