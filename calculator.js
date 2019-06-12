@@ -26,7 +26,7 @@ slider1.oninput = function() {
 }
 slider2.oninput = function() {
   output2.innerHTML = this.value;
-  calculate();
+  //calculate();
 }
 
 function calculate() {
