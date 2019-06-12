@@ -12,12 +12,12 @@ p {
   font-size: 20px;
 }
 
-metp {
+#metp {
   width: 100%;
   background-color: grey;
 }
 
-metpBar {
+#metpBar {
   width: 1%;
   height: 30px;
   background-color: green;
