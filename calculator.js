@@ -47,5 +47,5 @@ function calculate() {
 	var met =((((pandolf*0.0143)/5.05)/bm)*1000)/3.5;
 	var width = Math.round(met * 100) / 100;
 	elem.style.width = width + "%";
-	elem.innerHTML = width + " MET" + bm + " BM" + load + " Load" + speed + " Speed";
+	elem.innerHTML = width + " MET" + pandolf + " WATT" + met + " MET";
 }
