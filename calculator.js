@@ -48,6 +48,6 @@ function calculate() {
 	var pandolf = 1.5*bm + 2.0*(bm+load)*(load/bm)*(load/bm) + terrain*(bm+load)* 1.5*(speed/3.6)*(speed/3.6) + 0.35*(speed/3.6)*grade;
 	var met =((((pandolf*0.0143)/5.05)/bm)*1000)/3.5;
 	var width = Math.round(met * 100) / 100;
-	elem.style.width = width + "%";
+	elem.style.width = width*10 + "%";
 	elem.innerHTML = width + " MET";
 }
