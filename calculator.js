@@ -93,6 +93,8 @@ function plot() {
 		legend: {
         		display: false
     		},
+		responsive: true,
+  		maintainAspectRatio: false,
         	scales: {
 			xAxes: [{
 				scaleLabel: {
