@@ -6,12 +6,14 @@ output1.innerHTML = slider1.value;
 output2.innerHTML = slider2.value;
 
 slider1.oninput = function() {
-  output1.innerHTML = this.value;
-  updateMetpbar();
+  	output1.innerHTML = this.value;
+  	updateMetpbar();
+	plot();
 }
 slider2.oninput = function() {
-  output2.innerHTML = this.value;
-  updateMetpbar();
+  	output2.innerHTML = this.value;
+  	updateMetpbar();
+  	plot();
 }
 
 function calculateMET(bm) {
@@ -39,7 +41,7 @@ function updateMetpbar() {
 }
 
 function tte(wt){
-	//var metp = 
+	var metp = calculateMET(wt);
 	var wtt = Math.exp(9-0.8*metp);
 	wtt = Math.floor(wtt);
 	return wtt;
@@ -53,7 +55,7 @@ function plot() {
         	labels: ['50kg', '60kg', '70kg', '80kg', '90kg'],
         	datasets: [{
             	label: 'Body Weight',
-            	data: [50, 60, 70, 80, 90],
+            	data: [tte(50), tte(60), tte(70), tte(80), tte(90)],
             	backgroundColor: [
                 	'rgba(255, 99, 132, 0.2)',
 			'rgba(255, 159, 64, 0.2)',
