@@ -7,9 +7,14 @@ h1 {
   text-align: center;
 }
 
-p {
+h2 {
   font-family: verdana;
   font-size: 20px;
+}
+
+p {
+  font-family: verdana;
+  font-size: 10px;
 }
 
 #metp {
