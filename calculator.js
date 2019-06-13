@@ -34,6 +34,8 @@ function updateMetpbar() {
 	var width = Math.round(met * 100) / 100;
 	if (width > 10){
 		elem.style.width = "100%";
+	} else if (width < 2.1){
+		elem.style.width = "21%"
 	} else {
 		elem.style.width = width*10 + "%";
 	}
@@ -73,6 +75,9 @@ function plot() {
         	}]
     	},
     	options: {
+		legend: {
+        		display: false
+    		},
         	scales: {
 			xAxes: [{
 				scaleLabel: {
