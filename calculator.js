@@ -54,7 +54,6 @@ function plot() {
     	data: {
         	labels: ['50kg', '60kg', '70kg', '80kg', '90kg'],
         	datasets: [{
-            	label: 'Body Weight',
             	data: [tte(50), tte(60), tte(70), tte(80), tte(90)],
             	backgroundColor: [
                 	'rgba(255, 99, 132, 0.2)',
@@ -75,12 +74,22 @@ function plot() {
     	},
     	options: {
         	scales: {
-            	yAxes: [{
-                	ticks: {
-                    	beginAtZero: true
-                	}
-            	}]
-        	}
-    	}
+			xAxes: [{
+				scaleLabel: {
+        				display: true,
+        				labelString: 'Body Weight (kg)'
+      				}
+            			}],
+            		yAxes: [{
+				scaleLabel: {
+        				display: true,
+        				labelString: 'Work Tolerance (min)'
+      				},
+                		ticks: {
+                    			beginAtZero: true
+                			}
+            			}]
+        		}
+    		}
 	});
 }
