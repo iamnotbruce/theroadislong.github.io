@@ -46,6 +46,9 @@ function tte(wt){
 	var metp = calculateMET(wt);
 	var wtt = Math.exp(9-0.8*metp);
 	wtt = Math.floor(wtt);
+	if (wtt > 225){
+		wtt = 225;
+	}
 	return wtt;
 }
 
