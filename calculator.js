@@ -55,9 +55,18 @@ function tte(wt){
 	return wtt;
 }
 
+var myChart;
 function plot() {
+	if(myChart){
+	// if the chart is not undefined (e.g. it has been created)
+      	// then just update the underlying labels and data for each
+      	// dataset and re-render the chart
+		myChart.data.datasets.data = [tte(50), tte(60), tte(70), tte(80), tte(90)];
+        	myChart.update();
+	} else {
+	// otherwise, this is the first time we are loading so create the chart
 	var ctx = document.getElementById('myChart');
-	var myChart = new Chart(ctx, {
+	myChart = new Chart(ctx, {
     	type: 'bar',
     	data: {
         	labels: ['50kg', '60kg', '70kg', '80kg', '90kg'],
@@ -103,4 +112,5 @@ function plot() {
         		}
     		}
 	});
+	}
 }
