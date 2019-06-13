@@ -18,11 +18,12 @@ slider2.oninput = function() {
 
 function calculateMET(bm) {
 	var load = document.getElementById("load").value;
-	var speed = document.getElementById("march").value;
+	load = Number(load);
+	//var speed = document.getElementById("march").value;
+	//speed = Number(speed);
+	var speed = 5.3;
 	var terrain = 1.0;
 	var grade = 0;
-	load = Number(load);
-	speed = Number(speed);
 	var pandolf = 1.5*bm + 2.0*(bm+load)*(load/bm)*(load/bm) + terrain*(bm+load)* 1.5*(speed/3.6)*(speed/3.6) + 0.35*(speed/3.6)*grade;
 	var met =((((pandolf*0.0143)/5.05)/bm)*1000)/3.5;
 	return met;
