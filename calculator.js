@@ -29,7 +29,7 @@ slider2.oninput = function() {
   //calculate();
 }
 
-function calculate(sval1,sval2) {
+function calculate(load,speed) {
   var elem = document.getElementById("metpBar"); 
   var width = 1;
   var bm = 60;
@@ -42,9 +42,9 @@ function calculate(sval1,sval2) {
   // d = terrain
   // e = speed(m/s)
   // f = grade(%)
-  var pandolf = 1.5*bm+2*(bm+sval1)*(sval1/bm)*(sval1/bm)+terrain*(bm+sval1)*(1.5*(sval2/3.6)*(sval2/3.6)+0.35*(sval2/3.6)*grade)
-  	width =((((pandolf*0.0143)/5.05)/bm)*1000)/3.5
-	width = Math.round(width * 100) / 100
-	elem.width = width * 10;
-	elem.innerHTML = width * 1 + ' MET';
+  var pandolf = 1.5*bm+2*(bm+load)*(load/bm)*(load/bm)+terrain*(bm+load)*(1.5*(speed/3.6)*(speed/3.6)+0.35*(speed/3.6)*grade)
+  var met =((((pandolf*0.0143)/5.05)/bm)*1000)/3.5
+	width = Math.round(met * 100) / 100
+	elem.width = width;
+	elem.innerHTML = width + ' MET';
 }
