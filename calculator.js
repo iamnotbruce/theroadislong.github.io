@@ -22,15 +22,17 @@ output2.innerHTML = slider2.value;
 
 slider1.oninput = function() {
   output1.innerHTML = this.value;
-  calculate(slider1.value,slider2.value);
+  calculate();
 }
 slider2.oninput = function() {
   output2.innerHTML = this.value;
-  //calculate();
+  calculate();
 }
 
-function calculate(load,speed) {
-  var elem = document.getElementById("metpBar"); 
+function calculate() {
+  var elem = document.getElementById("metpBar");
+  var load = document.getElementById("load").value;
+  var speed = document.getElementById("march").value;
   var width = 1;
   var bm = 60;
   var terrain = 1;
