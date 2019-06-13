@@ -43,9 +43,9 @@ function calculate() {
   // d = terrain
   // e = speed(m/s)
   // f = grade(%)
-  var pandolf = (1.5*bm)+(2*(bm+load)*(load/bm)**2)+(terrain*(bm+load)*(1.5*(speed/3.6)**2+0.35*(speed/3.6)*grade))
-  var met =((((pandolf*0.0143)/5.05)/bm)*1000)/3.5
-  var width = Math.round(met * 100) / 100
+  var pandolf = (1.5*bm)+(2*(bm+load)*(load/bm)**2)+(terrain*(bm+load)*(1.5*(speed/3.6)**2+0.35*(speed/3.6)*grade));
+  var met =((((pandolf*0.0143)/5.05)/bm)*1000)/3.5;
+  var width = Math.round(met * 100) / 100;
 	elem.width = width;
 	elem.innerHTML = width + ' MET';
 }
