@@ -61,7 +61,7 @@ function plot() {
 	// if the chart is not undefined (e.g. it has been created)
       	// then just update the underlying labels and data for each
       	// dataset and re-render the chart
-		myChart.data.datasets[0].data = [calculateMET(50), calculateMET(60), calculateMET(70), calculateMET(80), calculateMET(90)];
+		myChart.data.datasets[0].data = [tte(50), tte(60), tte(70), tte(80), tte(90)];
         	myChart.update();
 	} else {
 	// otherwise, this is the first time we are loading so create the chart
