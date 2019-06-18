@@ -47,7 +47,7 @@ function updateMetpbar() {
 
 function tte(wt){
 	var metp = calculateMET(wt);
-  metp = Math.round(metp);
+  	metp = Math.round(metp);
 	var wtt = Math.exp(9.371-0.786*metp);
 	wtt = Math.floor(wtt);
 	if (wtt > 225){
@@ -62,7 +62,7 @@ function plot() {
 	// if the chart is not undefined (e.g. it has been created)
       	// then just update the underlying labels and data for each
       	// dataset and re-render the chart
-		myChart.data.datasets[0].data = [tte(50), tte(60), tte(70), tte(80), tte(90)];
+		myChart.data.datasets[0].data = [tte(52.0), tte(59.6), tte(65.5), tte(72.6), tte(88.3)];
         	myChart.update();
 	} else {
 	// otherwise, this is the first time we are loading so create the chart
@@ -70,9 +70,9 @@ function plot() {
 	myChart = new Chart(ctx, {
     	type: 'bar',
     	data: {
-        	labels: ['50kg', '60kg', '70kg', '80kg', '90kg'],
+        	labels: ['52.0kg', '59.6kg', '65.5kg', '72.6kg', '88.3kg'],
         	datasets: [{
-            	data: [tte(50), tte(60), tte(70), tte(80), tte(90)],
+            	data: [tte(52.0), tte(59.6), tte(65.5), tte(72.6), tte(88.3)],
             	backgroundColor: [
                 	'rgba(255, 99, 132, 0.2)',
 			'rgba(255, 159, 64, 0.2)',
