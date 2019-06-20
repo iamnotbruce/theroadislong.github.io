@@ -34,7 +34,7 @@ function calculateMET(bm) {
 function updateMetpbar() {
 	var elem = document.getElementById("metpBar");
 	var met = calculateMET(66.5);
-	var width = Math.round(met)*10/10;
+	var width = Math.round(met*10)/10;
 	if (width > 10){
 		elem.style.width = "100%";
 	} else if (width < 2){
