@@ -34,7 +34,7 @@ function calculateMET(bm) {
 function updateMetpbar() {
 	var elem = document.getElementById("metpBar");
 	var met = calculateMET(66.5);
-	var width = Math.round(met * 100) / 100;
+	var width = Math.round(met * 10) / 10;
 	if (width > 10){
 		elem.style.width = "100%";
 	} else if (width < 2.1){
@@ -47,6 +47,7 @@ function updateMetpbar() {
 
 function tte(wt){
 	var metp = calculateMET(wt);
+	metp = Math.round(metp * 10) / 10;
 	var wtt = Math.exp(9-0.8*metp);
 	wtt = Math.floor(wtt);
 	if (wtt > 225){
@@ -61,7 +62,7 @@ function plot() {
 	// if the chart is not undefined (e.g. it has been created)
       	// then just update the underlying labels and data for each
       	// dataset and re-render the chart
-		myChart.data.datasets[0].data = [tte(52.0), tte(61.1), tte(65.5), tte(72.6), tte(88.3)];
+		myChart.data.datasets[0].data = [tte(52.0), tte(59.6), tte(61.1), tte(65.5), tte(72.6), tte(88.3)];
         	myChart.update();
 	} else {
 	// otherwise, this is the first time we are loading so create the chart
@@ -69,22 +70,24 @@ function plot() {
 	myChart = new Chart(ctx, {
     	type: 'bar',
     	data: {
-        	labels: ['52.0kg', '61.1kg', '65.5kg', '72.6kg', '88.3kg'],
+        	labels: ['52.0kg', '59.6kg', '61.1kg', '65.5kg', '72.6kg', '88.3kg'],
         	datasets: [{
-            	data: [tte(52.0), tte(61.1), tte(65.5), tte(72.6), tte(88.3)],
+            	data: [tte(52.0), tte(59.6), tte(61.1), tte(65.5), tte(72.6), tte(88.3)],
             	backgroundColor: [
                 	'rgba(255, 99, 132, 0.2)',
 			'rgba(255, 159, 64, 0.2)',
                 	'rgba(255, 206, 86, 0.2)',
                 	'rgba(75, 192, 192, 0.2)',
-			'rgba(54, 162, 235, 0.2)'
+			'rgba(54, 162, 235, 0.2)',
+			'rgba(75, 0, 130, 0.2)'
             	],
             	borderColor: [
                 	'rgba(255, 99, 132, 1)',
 			'rgba(255, 159, 64, 1)',
                 	'rgba(255, 206, 86, 1)',
                 	'rgba(75, 192, 192, 1)',
-			'rgba(54, 162, 235, 1)'
+			'rgba(54, 162, 235, 1)',
+			'rgba(75, 0, 130, 1)'
             	],
             	borderWidth: 1
         	}]
