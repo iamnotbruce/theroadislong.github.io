@@ -48,7 +48,7 @@ function updateMetpbar() {
 function tte(wt){
 	var metp = calculateMET(wt);
 	metp = Math.round(metp * 10) / 10;
-	var wtt = Math.exp(9.872-0.875*metp);
+	var wtt = Math.exp(9.34-0.751*metp);
 	wtt = Math.floor(wtt);
 	if (wtt > 225){
 		wtt = 225;
