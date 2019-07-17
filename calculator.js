@@ -69,7 +69,7 @@ function plot() {
 	// otherwise, this is the first time we are loading so create the chart
 	var ctx = document.getElementById('myChart');
 	myChart = new Chart(ctx, {
-    	type: 'bar',
+    	type: 'radar',
     	data: {
         	//labels: ['52.0kg', '59.6kg', '61.1kg', '65.5kg', '72.6kg', '88.3kg'],
 		labels: ['52.0kg', '59.6kg', '65.5kg', '72.6kg', '88.3kg'],
